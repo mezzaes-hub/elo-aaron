@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Elona & Aaron — Save the Date</title>
+    <meta name="description"
+        content="Mariage en Israël — Salle Kedma (près de Jérusalem). Save the date, infos et RSVP.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Palette crème/beige chic */
+            --cream: #F7F3EA;
+            /* crème doux (fond principal) */
+            --cream2: #FAF7F2;
+            /* crème très clair (alternance) */
+            --sand: #E9DFD1;
+            /* beige sable (cards / bandeaux) */
+            --taupe: #A08874;
+            /* taupe chaud (titres/accents) */
+            --brown: #6E5746;
+            /* brun doux (texte accent) */
+            --text: #2B2B2B;
+            /* texte principal */
+            --muted: #6F6A63;
+            /* texte secondaire */
+            --maxw: 720px;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--cream2);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--taupe);
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 22px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Hero plus haut pour l'effet "glisser" */
+        header.hero {
+            background: linear-gradient(180deg, #F4EFDF 0%, #F7F3EA 100%);
+            color: var(--brown);
+            padding: 72px 20px 84px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 12px;
+            border: 1px solid rgba(110, 87, 70, .25);
+            border-radius: 999px;
+            font-size: 12px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--brown);
+            background: rgba(233, 223, 209, .5);
+        }
+
+        h1.names {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(34px, 8vw, 56px);
+            margin: 16px 0 6px;
+            color: var(--brown);
+            letter-spacing: .5px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .cta {
+            margin-top: 18px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(110, 87, 70, .25);
+            color: var(--brown);
+            background: #FBF8F3;
+        }
+
+        .btn--primary {
+            background: var(--sand);
+        }
+
+        /* Indice de scroll */
+        .scroll-indicator {
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .scroll-indicator .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(110, 87, 70, .35);
+            animation: pulse 1.8s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: .7;
+            }
+
+            50% {
+                transform: translateY(6px);
+                opacity: .35;
+            }
+        }
+
+        section {
+            padding: 34px 0;
+        }
+
+        .alt {
+            background: var(--cream);
+        }
+
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 5.5vw, 30px);
+            margin: 0 0 12px;
+            color: var(--taupe);
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #EFE9DE;
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+        }
+
+        .subtle {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Countdown stylé */
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .pill {
+            background: #FFFFFF;
+            border: 1px solid #EFE9DE;
+            border-radius: 12px;
+            padding: 12px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 68px;
+        }
+
+        .pill .num {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brown);
+            font-size: clamp(18px, 6vw, 28px);
+            line-height: 1;
+        }
+
+        .pill .label {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+            letter-spacing: .02em;
+        }
+
+        /* RSVP iframe responsive */
+        .rsvp-box {
+            background: #fff;
+            border: 1px solid #EFE9DE;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .rsvp-head {
+            padding: 14px 16px;
+            background: #F3EEE6;
+            border-bottom: 1px solid #E9DFD1;
+            color: var(--brown);
+            font-weight: 600;
+        }
+
+        .iframe-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 135%;
+            background: #FCFAF6;
+            overflow: hidden;
+        }
+
+        .iframe-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            padding: 26px 0 46px;
+            text-align: center;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero center">
+        <div class="wrap">
+            <span class="badge">Save the date</span>
+            <h1 class="names">Elona & Aaron</h1>
+            <div class="subtitle">Mariage en Israël — Salle Kedma, près de Jérusalem</div>
+            <div class="cta">
+                <a href="#rsvp" class="btn btn--primary">RSVP</a>
+                <a href="#compte" class="btn">Décompte</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Faites glisser</span><span class="dot"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Décompte -->
+    <section id="compte" class="alt center">
+        <div class="wrap">
+            <h2 class="section-title">Jusqu’au grand jour</h2>
+            <p class="subtle">12 novembre 2025</p>
+            <div class="countdown" role="timer" aria-live="polite">
+                <div class="pill">
+                    <div class="num" id="d">0</div>
+                    <div class="label">Jours</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="h">0</div>
+                    <div class="label">Heures</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="m">0</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="s">0</div>
+                    <div class="label">Secondes</div>
+                </div>
+            </div>
+            <p class="subtle" id="after"></p>
+        </div>
+    </section>
+
+    <!-- Section Infos -->
+    <section id="infos" class="center">
+        <div class="wrap">
+            <h2 class="section-title">Infos pratiques</h2>
+            <div class="card">
+                <p><strong>Lieu</strong> — Salle Kedma, proche de Jérusalem (Israël)</p>
+                <p><strong>Accès</strong> — Parking sur place; navettes possibles selon besoins.</p>
+                <p><strong>Hébergements</strong> — Hôtels aux alentours; recommandation sur demande.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section RSVP -->
+    <section id="rsvp" class="alt center">
+        <div class="wrap">
+            <h2 class="section-title">Formulaire RSVP</h2>
+            <div class="rsvp-box">
+                <div class="rsvp-head">Merci de confirmer votre présence</div>
+                <div class="iframe-wrap">
+                    <iframe src="https://tally.so/r/mVK466" title="RSVP — Elona & Aaron" loading="lazy"
+                        allow="clipboard-write; fullscreen" referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+            </div>
+            <p class="subtle" style="margin-top:10px;">Problème d’affichage ? <a href="https://tally.so/r/mVK466"
+                    target="_blank" rel="noopener">Ouvrir le formulaire</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2025 Elona & Aaron — Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Décompte vers 12 novembre 2025 à 12:00:00 locale (ajustez si besoin)
+        const target = new Date('2025-11-12T12:00:00');
+        const $d = document.getElementById('d');
+        const $h = document.getElementById('h');
+        const $m = document.getElementById('m');
+        const $s = document.getElementById('s');
+        const $after = document.getElementById('after');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) {
+                $d.textContent = 0; $h.textContent = 0; $m.textContent = 0; $s.textContent = 0;
+                $after.textContent = 'C’est le grand jour !';
+                clearInterval(timer);
+                return;
+            }
+            const sec = Math.floor(diff / 1000);
+            const days = Math.floor(sec / 86400);
+            const hours = Math.floor((sec % 86400) / 3600);
+            const mins = Math.floor((sec % 3600) / 60);
+            const secs = sec % 60;
+
+            $d.textContent = days;
+            $h.textContent = String(hours).padStart(2, '0');
+            $m.textContent = String(mins).padStart(2, '0');
+            $s.textContent = String(secs).padStart(2, '0');
+        }
+        updateCountdown();
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
