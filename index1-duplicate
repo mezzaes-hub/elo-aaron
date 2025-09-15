@@ -5,22 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Elona & Aaron — Invitation</title>
-    <meta name="description"
-        content="Invitation au mariage d'Elona & Aaron en Israël — Salle Kedma, Neve Ilan. RSVP, infos et décompte.">
+    <meta name="description" content="Invitation au mariage d'Elona & Aaron en Israël — Salle Kedma.">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Noto Sans Hebrew pour un rendu optimal de l'hébreu -->
+    <!-- Ajout de Noto Sans Hebrew pour un meilleur rendu de l'hébreu -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&family=Noto+Sans+Hebrew:wght@300;400&display=swap"
         rel="stylesheet">
     <style>
         :root {
+            /* Palette crème/beige chic */
             --cream: #F7F3EA;
+            /* crème doux (fond principal) */
             --cream2: #FAF7F2;
+            /* crème très clair (alternance) */
             --sand: #E9DFD1;
+            /* beige sable (cards / bandeaux) */
             --taupe: #A08874;
+            /* taupe chaud (titres/accents) */
             --brown: #6E5746;
+            /* brun doux (texte accent) */
             --text: #2B2B2B;
+            /* texte principal */
             --muted: #6F6A63;
+            /* texte secondaire */
             --maxw: 720px;
             --radius: 14px;
         }
@@ -41,25 +48,11 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        .logo {
-            display: block;
-            margin: 0 auto 25px auto;
-            max-width: 180px;
-            /* Ajustez selon la taille du logo */
-            height: auto;
-        }
-
         .wrap {
             width: 100%;
             max-width: var(--maxw);
             margin: 0 auto;
             padding: 22px;
-        }
-
-        .invitation-content .wrap {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            background: transparent;
         }
 
         .center {
@@ -87,15 +80,14 @@
             font-size: 14px;
         }
 
-        /* Invitation principale */
+        /* Styles pour la section d'invitation principale */
         .invitation-card {
-            padding: 40px 20px 15px;
+            padding: 40px 20px;
             text-align: center;
-            background: var(--cream2);
         }
 
         .hebrew-blessing {
-            font-family: 'Noto Sans Hebrew', serif;
+            font-family: 'Noto Sans Hebrew', 'Times New Roman', serif;
             font-size: 20px;
             color: var(--taupe);
             margin-bottom: 20px;
@@ -112,35 +104,27 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px 20px;
-            margin: 20px auto 30px auto;
+            margin: 20px auto;
             max-width: 500px;
             font-size: 14px;
             color: var(--muted);
             line-height: 1.5;
         }
 
-        @media(max-width: 520px) {
-            .family-groups {
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
-        }
-
         .main-announcement {
-            margin: 40px 0 10px 0;
+            margin: 40px 0;
             font-size: 16px;
         }
 
         .main-names {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 10vw, 56px);
-            margin: 12px 0 10px 0;
+            font-size: clamp(40px, 10vw, 64px);
+            margin: 10px 0;
             color: var(--brown);
-            letter-spacing: 1px;
         }
 
         .event-details {
-            margin: 26px 0 0 0;
+            margin: 30px 0;
         }
 
         .event-details p {
@@ -149,8 +133,8 @@
         }
 
         .memorial {
-            margin-top: 38px;
-            padding-top: 26px;
+            margin-top: 50px;
+            padding-top: 30px;
             border-top: 1px solid var(--sand);
             font-size: 14px;
             color: var(--muted);
@@ -159,60 +143,6 @@
 
         .memorial .hebrew-char {
             font-family: 'Noto Sans Hebrew', serif;
-        }
-
-        /* Styles pour les images de fleurs avec superposition sur le div wrap */
-        .flower-container {
-            position: relative;
-            width: 100%;
-            max-width: var(--maxw);
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .flower-top {
-            position: absolute;
-            top: -20px;
-            left: 22px;
-            right: 22px;
-            height: 120px;
-            z-index: 15;
-            overflow: visible;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .flower-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 22px;
-            right: 22px;
-            height: 120px;
-            z-index: 15;
-            overflow: visible;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .flower-top img,
-        .flower-bottom img {
-            width: 100%;
-            height: auto;
-            max-height: 120px;
-            object-fit: contain;
-            object-position: center;
-        }
-
-        .invitation-content {
-            background: transparent;
-            padding: 0;
-            position: relative;
-            z-index: 10;
-            margin: 0;
         }
 
         /* Countdown */
@@ -224,7 +154,7 @@
         }
 
         .pill {
-            background: #FFF;
+            background: #FFFFFF;
             border: 1px solid #EFE9DE;
             border-radius: 12px;
             padding: 12px 8px;
@@ -232,7 +162,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-width: 60px;
+            min-width: 68px;
         }
 
         .pill .num {
@@ -250,7 +180,7 @@
             letter-spacing: .02em;
         }
 
-        /* RSVP Iframe - Hauteur réduite */
+        /* RSVP Iframe - Hauteur augmentée */
         .rsvp-box {
             background: #fff;
             border: 1px solid #EFE9DE;
@@ -270,9 +200,10 @@
         .iframe-wrap {
             position: relative;
             width: 100%;
-            /* Hauteur réduite, ajuste cette valeur si besoin */
-            padding-top: 125%;
-            min-height: 540px;
+            /* Augmentation à 180% pour plus de hauteur initiale */
+            padding-top: 135%;
+            min-height: 750px;
+            /* Hauteur minimale pour garantir que tout s'affiche */
             background: #FCFAF6;
             overflow: hidden;
         }
@@ -295,69 +226,51 @@
 
 <body>
 
-    <!-- Invitation principale avec placeholders pour images de fleurs -->
+    <!-- Section d'invitation principale -->
     <section id="invitation" class="invitation-card">
-        <div class="flower-container">
-            <!-- Image de fleurs du haut -->
-            <div class="flower-top">
-                <img src="fl4.png" alt="Fleurs décoratives du haut">
-            </div>
+        <div class="wrap">
+            <div class="hebrew-blessing" dir="rtl">קול ששון וקול שמחה קול חתן וקול כלה</div>
+            <div class="bsd">בס״ד</div>
 
-            <!-- Contenu de l'invitation -->
-            <div class="invitation-content">
-                <div class="wrap">
-                    <img src="elo-aaron-logo.png" alt="Logo Elona & Aaron" class="logo">
-                    <div class="hebrew-blessing" dir="rtl">קול ששון וקול שמחה קול חתן וקול כלה</div>
-                    <div class="bsd">בס״ד</div>
+            <div class="family-groups">
 
-                    <div class="family-groups">
-                        <div>
-                            Mme Hanna Ifergane<br>
-                            Mme Claudine Renassia<br>
-                            Mr & Mme David Teboul
-                        </div>
-                        <div>
-                            Mr & Mme Serge Bismuth<br>
-                            Mme Renate Lancri<br>
-                            Mr & Mme Franck Bismuth
-                        </div>
-                    </div>
-
-                    <div class="main-announcement">
-                        Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs
-                        petits-enfants et enfants
-                        <div class="main-names">Elona & Aaron</div>
-                        et vous prient de bien vouloir assister à la Houppa qui sera célébrée le
-                    </div>
-
-                    <div class="event-details">
-                        <p><strong>11 Heshvan 5786</strong></p>
-                        <p><strong>Dimanche 02 novembre 2025</strong></p>
-                        <p>Houppa <strong>18:00</strong></p>
-                        <p>La cérémonie religieuse sera suivie d'un Cocktail</p>
-                        <p>En la salle « Kedma »<br>Moshav Neve Ilan</p>
-                    </div>
+                <div>
+                    Mme Hanna Ifergane<br>
+                    Mme Claudine Renassia<br>
+                    Mr & Mme David Teboul
+                </div>
+                <div>
+                    Mr & Mme Serge Bismuth<br>
+                    Mme Renate Lancri<br>
+                    Mr & Mme Franck Bismuth
                 </div>
             </div>
 
-            <!-- Image de fleurs du bas -->
-            <div class="flower-bottom">
-                <img src="fl5.png" alt="Fleurs décoratives du bas">
+            <div class="main-announcement">
+                Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs
+                petits-enfants et enfants
+                <h1 class="main-names">Elona & Aaron</h1>
+                et vous prient de bien vouloir assister à la Houppa qui sera célébrée le
             </div>
-        </div>
 
-        <!-- Section memorial en dehors du flower-container -->
-        <div class="wrap">
+            <div class="event-details">
+                <p><strong>11 Heshvan 5786</strong></p>
+                <p><strong>Dimanche 02 Novembre 2025</strong></p>
+                <p>Houppa <strong>17:30</strong></p>
+                <p>La cérémonie religieuse sera suivie d’un Cocktail à partir de <strong>18:30</strong></p>
+                <p>En la salle « Kedma»<br>Moshav Neve Ilan</p>
+            </div>
+
             <div class="memorial">
                 <p>En ce jour si spécial, nous nous souvenons avec amour et émotion de nos précieux grands-parents qui
-                    nous protègent auprès d'Hashem</p>
+                    nous protègent auprès d’Hashem</p>
                 <p>
                     Monsieur CLAUDE YOSSEF LANCRI <span class="hebrew-char">ז״ל</span><br>
                     Monsieur MOCHÉ TEBOUL <span class="hebrew-char">ז״ל</span><br>
                     Mr & Mme ROBERT IFERGANE <span class="hebrew-char">ז״ל</span><br>
                     Mme CECILE RENASSIA <span class="hebrew-char">ז״ל</span>
                 </p>
-                <p>Que leur lumière continue d'illuminer nos cœurs</p>
+                <p>Que leur lumière continue d’illuminer nos cœurs</p>
             </div>
         </div>
     </section>
@@ -365,7 +278,7 @@
     <!-- Section Décompte -->
     <section id="compte" class="alt center">
         <div class="wrap">
-            <h2 class="section-title">Jusqu'au grand jour</h2>
+            <h2 class="section-title">Jusqu’au grand jour</h2>
             <div class="countdown" role="timer" aria-live="polite">
                 <div class="pill">
                     <div class="num" id="d">0</div>
@@ -400,19 +313,8 @@
                     </iframe>
                 </div>
             </div>
-            <p class="subtle" style="margin-top:10px;">
-                Problème d'affichage ? <a href="https://tally.so/r/mVK466" target="_blank" rel="noopener">Ouvrir le
-                    formulaire</a>
-            </p>
-
-            <!-- Exemple pour afficher un message personnalisé selon le retour RSVP
-            <div class="remerciement-absent subtle">
-              Nous sommes tristes que vous ne puissiez être parmi nous pour célébrer ce jour. Vos prières et vos pensées nous accompagnent pour le début de cette nouvelle étape de notre vie.
-            </div>
-            <div class="remerciement-present subtle">
-              Votre présence est le plus beau des cadeaux. Nous avons hâte de célébrer ce moment inoubliable avec vous !
-            </div>
-            -->
+            <p class="subtle" style="margin-top:10px;">Problème d’affichage ? <a href="https://tally.so/r/mVK466"
+                    target="_blank" rel="noopener">Ouvrir le formulaire</a></p>
         </div>
     </section>
 
@@ -423,19 +325,20 @@
     </footer>
 
     <script>
-        // Décompte vers le 02 novembre 2025 à 17:30
+        // Décompte vers le 02 Novembre 2025 à 17:30 (heure de la Houppa)
         const target = new Date('2025-11-02T17:30:00');
         const $d = document.getElementById('d');
         const $h = document.getElementById('h');
         const $m = document.getElementById('m');
         const $s = document.getElementById('s');
         const $after = document.getElementById('after');
+
         function updateCountdown() {
             const now = new Date();
             const diff = target - now;
             if (diff <= 0) {
                 $d.textContent = 0; $h.textContent = 0; $m.textContent = 0; $s.textContent = 0;
-                $after.textContent = 'C\'est le grand jour !';
+                $after.textContent = 'C’est le grand jour !';
                 clearInterval(timer);
                 return;
             }
@@ -444,6 +347,7 @@
             const hours = Math.floor((sec % 86400) / 3600);
             const mins = Math.floor((sec % 3600) / 60);
             const secs = sec % 60;
+
             $d.textContent = days;
             $h.textContent = String(hours).padStart(2, '0');
             $m.textContent = String(mins).padStart(2, '0');

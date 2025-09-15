@@ -9,9 +9,7 @@
         content="Invitation au mariage d'Elona & Aaron en Israël — Salle Kedma, Neve Ilan. RSVP, infos et décompte.">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Noto Sans Hebrew pour un rendu optimal de l'hébreu -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&family=Noto+Sans+Hebrew:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&family=Noto+Sans+Hebrew:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
             --cream: #F7F3EA;
@@ -24,142 +22,69 @@
             --maxw: 720px;
             --radius: 14px;
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            background: var(--cream2);
-            color: var(--text);
+        * { box-sizing: border-box; }
+        html, body {
+            margin: 0; padding: 0; background: var(--cream2); color: var(--text);
             font-family: 'Inter', 'Noto Sans Hebrew', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         .logo {
-            display: block;
-            margin: 0 auto 25px auto;
-            max-width: 180px;
-            /* Ajustez selon la taille du logo */
-            height: auto;
-        }
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 180px;  /* Ajustez selon la taille du logo */
+  height: auto;
+}
 
-        .wrap {
-            width: 100%;
-            max-width: var(--maxw);
-            margin: 0 auto;
-            padding: 22px;
-        }
-
-        .invitation-content .wrap {
-            padding-top: 80px;
-            padding-bottom: 80px;
+        .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 22px; }
+        .invitation-content .wrap { 
+            padding-top: 80px; 
+            padding-bottom: 80px; 
             background: transparent;
         }
-
-        .center {
-            text-align: center;
-        }
-
-        section {
-            padding: 40px 0;
-        }
-
-        .alt {
-            background: var(--cream);
-        }
-
+        .center { text-align: center; }
+        section { padding: 40px 0; }
+        .alt { background: var(--cream); }
         h2.section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(22px, 5.5vw, 30px);
-            margin: 0 0 12px;
-            color: var(--taupe);
-            text-align: center;
+            margin: 0 0 12px; color: var(--taupe); text-align: center;
         }
-
-        .subtle {
-            color: var(--muted);
-            font-size: 14px;
-        }
+        .subtle { color: var(--muted); font-size: 14px; }
 
         /* Invitation principale */
-        .invitation-card {
-            padding: 40px 20px 15px;
-            text-align: center;
+        .invitation-card { 
+            padding: 40px 20px 15px; 
+            text-align: center; 
             background: var(--cream2);
         }
-
         .hebrew-blessing {
             font-family: 'Noto Sans Hebrew', serif;
-            font-size: 20px;
-            color: var(--taupe);
-            margin-bottom: 20px;
-            direction: rtl;
+            font-size: 20px; color: var(--taupe); margin-bottom: 20px; direction: rtl;
         }
-
-        .bsd {
-            font-family: 'Noto Sans Hebrew', serif;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
+        .bsd { font-family: 'Noto Sans Hebrew', serif; font-size: 18px; margin-bottom: 30px; }
         .family-groups {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px 20px;
-            margin: 20px auto 30px auto;
-            max-width: 500px;
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.5;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
+            margin: 20px auto 30px auto; max-width: 500px;
+            font-size: 14px; color: var(--muted); line-height: 1.5;
         }
-
         @media(max-width: 520px) {
-            .family-groups {
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
+            .family-groups { grid-template-columns: 1fr; justify-items: center; }
         }
-
-        .main-announcement {
-            margin: 40px 0 10px 0;
-            font-size: 16px;
-        }
-
+        .main-announcement { margin: 40px 0 10px 0; font-size: 16px; }
         .main-names {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 10vw, 56px);
-            margin: 12px 0 10px 0;
-            color: var(--brown);
+            font-size: clamp(32px, 10vw, 56px); margin: 12px 0 10px 0; color: var(--brown);
             letter-spacing: 1px;
         }
-
-        .event-details {
-            margin: 26px 0 0 0;
-        }
-
-        .event-details p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-
+        .event-details { margin: 26px 0 0 0; }
+        .event-details p { margin: 5px 0; font-size: 16px; }
         .memorial {
-            margin-top: 38px;
-            padding-top: 26px;
-            border-top: 1px solid var(--sand);
-            font-size: 14px;
-            color: var(--muted);
-            font-style: italic;
+            margin-top: 38px; padding-top: 26px; border-top: 1px solid var(--sand);
+            font-size: 14px; color: var(--muted); font-style: italic;
         }
-
-        .memorial .hebrew-char {
-            font-family: 'Noto Sans Hebrew', serif;
-        }
+        .memorial .hebrew-char { font-family: 'Noto Sans Hebrew', serif; }
 
         /* Styles pour les images de fleurs avec superposition sur le div wrap */
         .flower-container {
@@ -169,7 +94,6 @@
             margin: 0 auto;
             padding: 0;
         }
-
         .flower-top {
             position: absolute;
             top: -20px;
@@ -183,7 +107,6 @@
             justify-content: center;
             pointer-events: none;
         }
-
         .flower-bottom {
             position: absolute;
             bottom: 0;
@@ -197,7 +120,6 @@
             justify-content: center;
             pointer-events: none;
         }
-
         .flower-top img,
         .flower-bottom img {
             width: 100%;
@@ -206,7 +128,6 @@
             object-fit: contain;
             object-position: center;
         }
-
         .invitation-content {
             background: transparent;
             padding: 0;
@@ -217,78 +138,42 @@
 
         /* Countdown */
         .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 8px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px;
         }
-
         .pill {
-            background: #FFF;
-            border: 1px solid #EFE9DE;
-            border-radius: 12px;
-            padding: 12px 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 60px;
+            background: #FFF; border: 1px solid #EFE9DE; border-radius: 12px;
+            padding: 12px 8px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; min-width: 60px;
         }
-
         .pill .num {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--brown);
-            font-size: clamp(18px, 6vw, 28px);
-            line-height: 1;
+            font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brown);
+            font-size: clamp(18px, 6vw, 28px); line-height: 1;
         }
-
         .pill .label {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 4px;
-            letter-spacing: .02em;
+            font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: .02em;
         }
 
         /* RSVP Iframe - Hauteur réduite */
         .rsvp-box {
-            background: #fff;
-            border: 1px solid #EFE9DE;
-            border-radius: var(--radius);
-            overflow: hidden;
+            background: #fff; border: 1px solid #EFE9DE; border-radius: var(--radius); overflow: hidden;
         }
-
         .rsvp-head {
             padding: 14px 16px;
-            background: #F3EEE6;
-            border-bottom: 1px solid #E9DFD1;
-            color: var(--brown);
-            font-weight: 600;
-            text-align: left;
+            background: #F3EEE6; border-bottom: 1px solid #E9DFD1;
+            color: var(--brown); font-weight: 600; text-align: left;
         }
-
         .iframe-wrap {
-            position: relative;
-            width: 100%;
+            position: relative; width: 100%;
             /* Hauteur réduite, ajuste cette valeur si besoin */
             padding-top: 125%;
             min-height: 540px;
-            background: #FCFAF6;
-            overflow: hidden;
+            background: #FCFAF6; overflow: hidden;
         }
-
         .iframe-wrap iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
         }
-
         footer {
-            padding: 26px 0 46px;
-            text-align: center;
-            color: var(--muted);
+            padding: 26px 0 46px; text-align: center; color: var(--muted);
         }
     </style>
 </head>
@@ -302,7 +187,7 @@
             <div class="flower-top">
                 <img src="fl4.png" alt="Fleurs décoratives du haut">
             </div>
-
+            
             <!-- Contenu de l'invitation -->
             <div class="invitation-content">
                 <div class="wrap">
@@ -324,8 +209,7 @@
                     </div>
 
                     <div class="main-announcement">
-                        Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs
-                        petits-enfants et enfants
+                        Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs petits-enfants et enfants
                         <div class="main-names">Elona & Aaron</div>
                         et vous prient de bien vouloir assister à la Houppa qui sera célébrée le
                     </div>
@@ -339,18 +223,17 @@
                     </div>
                 </div>
             </div>
-
+            
             <!-- Image de fleurs du bas -->
             <div class="flower-bottom">
                 <img src="fl5.png" alt="Fleurs décoratives du bas">
             </div>
         </div>
-
+        
         <!-- Section memorial en dehors du flower-container -->
         <div class="wrap">
             <div class="memorial">
-                <p>En ce jour si spécial, nous nous souvenons avec amour et émotion de nos précieux grands-parents qui
-                    nous protègent auprès d'Hashem</p>
+                <p>En ce jour si spécial, nous nous souvenons avec amour et émotion de nos précieux grands-parents qui nous protègent auprès d'Hashem</p>
                 <p>
                     Monsieur CLAUDE YOSSEF LANCRI <span class="hebrew-char">ז״ל</span><br>
                     Monsieur MOCHÉ TEBOUL <span class="hebrew-char">ז״ל</span><br>
@@ -367,22 +250,10 @@
         <div class="wrap">
             <h2 class="section-title">Jusqu'au grand jour</h2>
             <div class="countdown" role="timer" aria-live="polite">
-                <div class="pill">
-                    <div class="num" id="d">0</div>
-                    <div class="label">Jours</div>
-                </div>
-                <div class="pill">
-                    <div class="num" id="h">0</div>
-                    <div class="label">Heures</div>
-                </div>
-                <div class="pill">
-                    <div class="num" id="m">0</div>
-                    <div class="label">Minutes</div>
-                </div>
-                <div class="pill">
-                    <div class="num" id="s">0</div>
-                    <div class="label">Secondes</div>
-                </div>
+                <div class="pill"><div class="num" id="d">0</div><div class="label">Jours</div></div>
+                <div class="pill"><div class="num" id="h">0</div><div class="label">Heures</div></div>
+                <div class="pill"><div class="num" id="m">0</div><div class="label">Minutes</div></div>
+                <div class="pill"><div class="num" id="s">0</div><div class="label">Secondes</div></div>
             </div>
             <p class="subtle" id="after"></p>
         </div>
@@ -401,8 +272,7 @@
                 </div>
             </div>
             <p class="subtle" style="margin-top:10px;">
-                Problème d'affichage ? <a href="https://tally.so/r/mVK466" target="_blank" rel="noopener">Ouvrir le
-                    formulaire</a>
+                Problème d'affichage ? <a href="https://tally.so/r/mVK466" target="_blank" rel="noopener">Ouvrir le formulaire</a>
             </p>
 
             <!-- Exemple pour afficher un message personnalisé selon le retour RSVP
@@ -417,9 +287,7 @@
     </section>
 
     <footer>
-        <div class="wrap">
-            <p>&copy; 2025 Elona & Aaron — Tous droits réservés | Revolt Media</p>
-        </div>
+        <div class="wrap"><p>&copy; 2025 Elona & Aaron — Tous droits réservés | Revolt Media</p></div>
     </footer>
 
     <script>
@@ -453,5 +321,4 @@
         const timer = setInterval(updateCountdown, 1000);
     </script>
 </body>
-
 </html>
