@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="fr">
+<html lang="he">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Elona & Aaron — Invitation</title>
+    <title>אלונה ואהרון — הזמנה</title>
     <meta name="description"
-        content="Invitation au mariage d'Elona & Aaron en Israël — Salle Kedma, Neve Ilan. RSVP, infos et décompte.">
+        content="הזמנה לחתונה של אלונה ואהרון בישראל — אולם קדמה, נווה אילן. אישור הגעה, מידע וספירה לאחור.">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Noto Sans Hebrew pour un rendu optimal de l'hébreu -->
     <link
@@ -41,11 +41,48 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
+        /* Language toggle container */
+        .language-toggle-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            background: var(--cream);
+            border-radius: 25px;
+            padding: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--sand);
+        }
+
+        .language-option {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: transparent;
+            color: var(--muted);
+        }
+
+        .language-option.active {
+            background: var(--brown);
+            color: white;
+        }
+
+        .language-option:hover:not(.active) {
+            background: var(--sand);
+            color: var(--text);
+        }
+
         .logo {
             display: block;
             margin: 0 auto 25px auto;
             max-width: 180px;
-            /* Ajustez selon la taille du logo */
             height: auto;
         }
 
@@ -197,7 +234,6 @@
             align-items: flex-start;
             justify-content: center;
             pointer-events: none;
-            /* margin-top: 5px; */
             padding-top: 20px;
         }
 
@@ -253,7 +289,7 @@
             letter-spacing: .02em;
         }
 
-        /* RSVP Iframe - Hauteur réduite */
+        /* RSVP Iframe */
         .rsvp-box {
             background: #fff;
             border: 1px solid #EFE9DE;
@@ -273,7 +309,6 @@
         .iframe-wrap {
             position: relative;
             width: 100%;
-            /* Hauteur encore plus grande pour le formulaire */
             padding-top: 200%;
             min-height: 900px;
             background: #FCFAF6;
@@ -294,42 +329,39 @@
             color: var(--muted);
         }
 
-        /* Language toggle container */
-        .language-toggle-container {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            display: flex;
-            background: var(--cream);
-            border-radius: 25px;
-            padding: 4px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 1px solid var(--sand);
+        /* RTL Support - Tout centré en hébreu */
+        [dir="rtl"] {
+            direction: rtl;
+            text-align: center;
         }
 
-        .language-option {
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            background: transparent;
-            color: var(--muted);
+        [dir="rtl"] .center {
+            text-align: center;
         }
 
-        .language-option.active {
-            background: var(--brown);
-            color: white;
+
+        [dir="rtl"] .rsvp-head {
+            text-align: center;
         }
 
-        .language-option:hover:not(.active) {
-            background: var(--sand);
-            color: var(--text);
+        [dir="rtl"] .family-groups {
+            text-align: center;
+        }
+
+        [dir="rtl"] .main-announcement {
+            text-align: center;
+        }
+
+        [dir="rtl"] .event-details {
+            text-align: center;
+        }
+
+        [dir="rtl"] .memorial {
+            text-align: center;
+        }
+
+        [dir="rtl"] .subtle {
+            text-align: center;
         }
 
         /* Waze Button */
@@ -372,7 +404,7 @@
             object-fit: contain;
         }
 
-        /* Mobile adjustments for language toggle */
+        /* Mobile RTL adjustments */
         @media(max-width: 768px) {
             .language-toggle-container {
                 top: 15px;
@@ -391,12 +423,12 @@
     </style>
 </head>
 
-<body>
+<body dir="rtl">
 
     <!-- Language toggle container -->
     <div class="language-toggle-container">
-        <button class="language-option active" id="french-btn" onclick="toggleLanguage()">Français</button>
-        <button class="language-option" id="hebrew-btn" onclick="toggleLanguage()">עברית</button>
+        <button class="language-option" id="french-btn" onclick="toggleLanguage()">Français</button>
+        <button class="language-option active" id="hebrew-btn" onclick="toggleLanguage()">עברית</button>
     </div>
 
     <!-- Invitation principale avec placeholders pour images de fleurs -->
@@ -404,49 +436,48 @@
         <div class="flower-container">
             <!-- Image de fleurs du haut -->
             <div class="flower-top">
-                <img src="fl4.png" alt="Fleurs décoratives du haut">
+                <img src="fl4.png" alt="פרחים דקורטיביים למעלה">
             </div>
 
             <!-- Contenu de l'invitation -->
             <div class="invitation-content">
                 <div class="wrap">
-                    <img src="elo-aaron-logo.png" alt="Logo Elona & Aaron" class="logo">
+                    <img src="elo-aaron-logo.png" alt="לוגו אלונה ואהרון" class="logo">
                     <div class="hebrew-blessing" dir="rtl">קול ששון וקול שמחה קול חתן וקול כלה</div>
                     <div class="bsd">בס״ד</div>
 
                     <div class="family-groups">
                         <div>
-                            Mme Hanna Ifergane<br>
-                            Mme Claudine Renassia<br>
-                            Mr & Mme David Teboul
+                            
+                            חנה איפרגן<br>
+                             קלודין רנסיה<br>
+                             דוד טבול
                         </div>
                         <div>
-                            Mr & Mme Serge Bismuth<br>
-                            Mme Renate Lancri<br>
-                            Mr & Mme Franck Bismuth
+                             סרג' ביסמות<br>
+                             רנטה לנקרי<br>
+                             פרנק ביסמות
                         </div>
                     </div>
 
                     <div class="main-announcement">
-                        Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs
-                        petits-enfants et enfants
-                        <div class="main-names">Elona & Aaron</div>
-                        et vous prient de bien vouloir assister à la Houppa qui sera célébrée le
+                        בשבח והודיה לה׳ יתברך הננו שמחים להזמינכם לשמחת נישואי ילדינו
+                        <div class="main-names">אלונה & אהרון</div>
+                        ומבקשים מכם לכבד בנוכחותכם בחתונה שתתקיים ב
                     </div>
 
                     <div class="event-details">
-                        <p><strong>11 Heshvan 5786</strong></p>
-                        <p><strong>Dimanche 02 novembre 2025</strong></p>
-                        <p>Houppa <strong>18:00</strong></p>
-                        <p>La cérémonie religieuse sera suivie d'un Cocktail</p>
-                        <p>En la salle « Kedma »<br>Moshav Neve Ilan</p>
+                        <p><strong>י״א חשון תשפ״ו</strong></p>
+                        <p><strong>יום ראשון 2 בנובמבר 2025</strong></p>
+                        <p>חופה <strong>18:00</strong></p>
+                        <p>באולם "קדמה"<br>מושב נווה אילן</p>
                     </div>
                 </div>
             </div>
 
             <!-- Image de fleurs du bas -->
             <div class="flower-bottom">
-                <img src="fl5.png" alt="Fleurs décoratives du bas">
+                <img src="fl5.png" alt="פרחים דקורטיביים למטה">
             </div>
         </div>
 
@@ -454,24 +485,23 @@
         <div class="wrap center">
             <a href="https://waze.com/ul?q=Kedma%20Hall%2C%20Neve%20Ilan%2C%20Israel" target="_blank" class="waze-button">
                 <div class="waze-logo">
-                    <img src="Waze-Logo-PNG.png" alt="Logo Waze">
+                    <img src="Waze-Logo-PNG.png" alt="לוגו Waze">
                 </div>
-                <span>Itinéraire</span>
+                <span>מסלול הגעה</span>
             </a>
         </div>
 
         <!-- Section memorial en dehors du flower-container -->
         <div class="wrap">
             <div class="memorial">
-                <p>En ce jour si spécial, nous nous souvenons avec amour et émotion de nos précieux grands-parents qui
-                    nous protègent auprès d'Hashem</p>
+                <p>ביום המיוחד הזה, אנו זוכרים באהבה ורגש את הסבים היקרים שלנו שמגנים עלינו אצל השם</p>
                 <p>
-                    Monsieur CLAUDE YOSSEF LANCRI <span class="hebrew-char">ז״ל</span><br>
-                    Monsieur MOCHÉ TEBOUL <span class="hebrew-char">ז״ל</span><br>
-                    Mr & Mme ROBERT IFERGANE <span class="hebrew-char">ז״ל</span><br>
-                    Mme CECILE RENASSIA <span class="hebrew-char">ז״ל</span>
+                     קלוד יוסף לנקרי <span class="hebrew-char">ז״ל</span><br>
+                     משה טבול <span class="hebrew-char">ז״ל</span><br>
+                     רוברט איפרגן <span class="hebrew-char">ז״ל</span><br>
+                     ססיל רנסיה <span class="hebrew-char">ז״ל</span>
                 </p>
-                <p>Que leur lumière continue d'illuminer nos cœurs</p>
+                <p>שאורם ימשיך להאיר את לבבותינו</p>
             </div>
         </div>
     </section>
@@ -479,23 +509,23 @@
     <!-- Section Décompte -->
     <section id="compte" class="alt center">
         <div class="wrap">
-            <h2 class="section-title">Jusqu'au grand jour</h2>
+            <h2 class="section-title">עד היום הגדול</h2>
             <div class="countdown" role="timer" aria-live="polite">
                 <div class="pill">
                     <div class="num" id="d">0</div>
-                    <div class="label">Jours</div>
+                    <div class="label">ימים</div>
                 </div>
                 <div class="pill">
                     <div class="num" id="h">0</div>
-                    <div class="label">Heures</div>
+                    <div class="label">שעות</div>
                 </div>
                 <div class="pill">
                     <div class="num" id="m">0</div>
-                    <div class="label">Minutes</div>
+                    <div class="label">דקות</div>
                 </div>
                 <div class="pill">
                     <div class="num" id="s">0</div>
-                    <div class="label">Secondes</div>
+                    <div class="label">שניות</div>
                 </div>
             </div>
             <p class="subtle" id="after"></p>
@@ -505,34 +535,24 @@
     <!-- Section RSVP -->
     <section id="rsvp" class="center">
         <div class="wrap">
-            <h2 class="section-title">Formulaire RSVP</h2>
+            <h2 class="section-title">טופס אישור הגעה</h2>
             <div class="rsvp-box">
-                <div class="rsvp-head">Merci de confirmer votre présence</div>
+                <div class="rsvp-head">תודה על אישור הנוכחות שלכם</div>
                 <div class="iframe-wrap">
-                    <iframe src="https://tally.so/r/mVK466" title="RSVP — Elona & Aaron" loading="lazy"
+                    <iframe src="https://tally.so/r/wba1Pe" title="אישור הגעה — אלונה ואהרון" loading="lazy"
                         allow="clipboard-write; fullscreen" referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
                 </div>
             </div>
             <p class="subtle" style="margin-top:10px;">
-                Problème d'affichage ? <a href="https://tally.so/r/mVK466" target="_blank" rel="noopener">Ouvrir le
-                    formulaire</a>
+                בעיה בתצוגה? <a href="https://tally.so/r/wba1Pe" target="_blank" rel="noopener">פתח את הטופס</a>
             </p>
-
-            <!-- Exemple pour afficher un message personnalisé selon le retour RSVP
-            <div class="remerciement-absent subtle">
-              Nous sommes tristes que vous ne puissiez être parmi nous pour célébrer ce jour. Vos prières et vos pensées nous accompagnent pour le début de cette nouvelle étape de notre vie.
-            </div>
-            <div class="remerciement-present subtle">
-              Votre présence est le plus beau des cadeaux. Nous avons hâte de célébrer ce moment inoubliable avec vous !
-            </div>
-            -->
         </div>
     </section>
 
     <footer>
         <div class="wrap">
-            <p>&copy; 2025 Elona & Aaron — Tous droits réservés | Revolt Media</p>
+            <p>&copy; 2025 אלונה ואהרון — כל הזכויות שמורות | Revolt Media</p>
         </div>
     </footer>
 
@@ -548,8 +568,8 @@
             hebrewBtn.classList.toggle('active');
             
             // Rediriger vers la page appropriée
-            if (hebrewBtn.classList.contains('active')) {
-                window.location.href = 'index-hebrew.html';
+            if (frenchBtn.classList.contains('active')) {
+                window.location.href = 'index.html';
             }
         }
 
@@ -560,12 +580,13 @@
         const $m = document.getElementById('m');
         const $s = document.getElementById('s');
         const $after = document.getElementById('after');
+        
         function updateCountdown() {
             const now = new Date();
             const diff = target - now;
             if (diff <= 0) {
                 $d.textContent = 0; $h.textContent = 0; $m.textContent = 0; $s.textContent = 0;
-                $after.textContent = 'C\'est le grand jour !';
+                $after.textContent = 'זה היום הגדול!';
                 clearInterval(timer);
                 return;
             }

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Elona & Aaron — Invitation</title>
+    <meta name="description" content="Invitation au mariage d'Elona & Aaron en Israël — Salle Kedma.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ajout de Noto Sans Hebrew pour un meilleur rendu de l'hébreu -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&family=Noto+Sans+Hebrew:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Palette crème/beige chic */
+            --cream: #F7F3EA;
+            /* crème doux (fond principal) */
+            --cream2: #FAF7F2;
+            /* crème très clair (alternance) */
+            --sand: #E9DFD1;
+            /* beige sable (cards / bandeaux) */
+            --taupe: #A08874;
+            /* taupe chaud (titres/accents) */
+            --brown: #6E5746;
+            /* brun doux (texte accent) */
+            --text: #2B2B2B;
+            /* texte principal */
+            --muted: #6F6A63;
+            /* texte secondaire */
+            --maxw: 720px;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--cream2);
+            color: var(--text);
+            font-family: 'Inter', 'Noto Sans Hebrew', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 22px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .alt {
+            background: var(--cream);
+        }
+
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 5.5vw, 30px);
+            margin: 0 0 12px;
+            color: var(--taupe);
+            text-align: center;
+        }
+
+        .subtle {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Styles pour la section d'invitation principale */
+        .invitation-card {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hebrew-blessing {
+            font-family: 'Noto Sans Hebrew', 'Times New Roman', serif;
+            font-size: 20px;
+            color: var(--taupe);
+            margin-bottom: 20px;
+            direction: rtl;
+        }
+
+        .bsd {
+            font-family: 'Noto Sans Hebrew', serif;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .family-groups {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .main-announcement {
+            margin: 40px 0;
+            font-size: 16px;
+        }
+
+        .main-names {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 10vw, 64px);
+            margin: 10px 0;
+            color: var(--brown);
+        }
+
+        .event-details {
+            margin: 30px 0;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .memorial {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--sand);
+            font-size: 14px;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .memorial .hebrew-char {
+            font-family: 'Noto Sans Hebrew', serif;
+        }
+
+        /* Countdown */
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .pill {
+            background: #FFFFFF;
+            border: 1px solid #EFE9DE;
+            border-radius: 12px;
+            padding: 12px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 68px;
+        }
+
+        .pill .num {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brown);
+            font-size: clamp(18px, 6vw, 28px);
+            line-height: 1;
+        }
+
+        .pill .label {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+            letter-spacing: .02em;
+        }
+
+        /* RSVP Iframe - Hauteur augmentée */
+        .rsvp-box {
+            background: #fff;
+            border: 1px solid #EFE9DE;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .rsvp-head {
+            padding: 14px 16px;
+            background: #F3EEE6;
+            border-bottom: 1px solid #E9DFD1;
+            color: var(--brown);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .iframe-wrap {
+            position: relative;
+            width: 100%;
+            /* Augmentation à 180% pour plus de hauteur initiale */
+            padding-top: 135%;
+            min-height: 750px;
+            /* Hauteur minimale pour garantir que tout s'affiche */
+            background: #FCFAF6;
+            overflow: hidden;
+        }
+
+        .iframe-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            padding: 26px 0 46px;
+            text-align: center;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Section d'invitation principale -->
+    <section id="invitation" class="invitation-card">
+        <div class="wrap">
+            <div class="hebrew-blessing" dir="rtl">קול ששון וקול שמחה קול חתן וקול כלה</div>
+            <div class="bsd">בס״ד</div>
+
+            <div class="family-groups">
+
+                <div>
+                    Mme Hanna Ifergane<br>
+                    Mme Claudine Renassia<br>
+                    Mr & Mme David Teboul
+                </div>
+                <div>
+                    Mr & Mme Serge Bismuth<br>
+                    Mme Renate Lancri<br>
+                    Mr & Mme Franck Bismuth
+                </div>
+            </div>
+
+            <div class="main-announcement">
+                Avec louanges et gratitude envers Hachem, ont la joie de vous faire part du mariage de leurs
+                petits-enfants et enfants
+                <h1 class="main-names">Elona & Aaron</h1>
+                et vous prient de bien vouloir assister à la Houppa qui sera célébrée le
+            </div>
+
+            <div class="event-details">
+                <p><strong>11 Heshvan 5786</strong></p>
+                <p><strong>Dimanche 02 Novembre 2025</strong></p>
+                <p>Houppa <strong>17:30</strong></p>
+                <p>La cérémonie religieuse sera suivie d’un Cocktail à partir de <strong>18:30</strong></p>
+                <p>En la salle « Kedma»<br>Moshav Neve Ilan</p>
+            </div>
+
+            <div class="memorial">
+                <p>En ce jour si spécial, nous nous souvenons avec amour et émotion de nos précieux grands-parents qui
+                    nous protègent auprès d’Hashem</p>
+                <p>
+                    Monsieur CLAUDE YOSSEF LANCRI <span class="hebrew-char">ז״ל</span><br>
+                    Monsieur MOCHÉ TEBOUL <span class="hebrew-char">ז״ל</span><br>
+                    Mr & Mme ROBERT IFERGANE <span class="hebrew-char">ז״ל</span><br>
+                    Mme CECILE RENASSIA <span class="hebrew-char">ז״ל</span>
+                </p>
+                <p>Que leur lumière continue d’illuminer nos cœurs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Décompte -->
+    <section id="compte" class="alt center">
+        <div class="wrap">
+            <h2 class="section-title">Jusqu’au grand jour</h2>
+            <div class="countdown" role="timer" aria-live="polite">
+                <div class="pill">
+                    <div class="num" id="d">0</div>
+                    <div class="label">Jours</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="h">0</div>
+                    <div class="label">Heures</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="m">0</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="pill">
+                    <div class="num" id="s">0</div>
+                    <div class="label">Secondes</div>
+                </div>
+            </div>
+            <p class="subtle" id="after"></p>
+        </div>
+    </section>
+
+    <!-- Section RSVP -->
+    <section id="rsvp" class="center">
+        <div class="wrap">
+            <h2 class="section-title">Formulaire RSVP</h2>
+            <div class="rsvp-box">
+                <div class="rsvp-head">Merci de confirmer votre présence</div>
+                <div class="iframe-wrap">
+                    <iframe src="https://tally.so/r/mVK466" title="RSVP — Elona & Aaron" loading="lazy"
+                        allow="clipboard-write; fullscreen" referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+            </div>
+            <p class="subtle" style="margin-top:10px;">Problème d’affichage ? <a href="https://tally.so/r/mVK466"
+                    target="_blank" rel="noopener">Ouvrir le formulaire</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2025 Elona & Aaron — Tous droits réservés | Revolt Media</p>
+        </div>
+    </footer>
+
+    <script>
+        // Décompte vers le 02 Novembre 2025 à 17:30 (heure de la Houppa)
+        const target = new Date('2025-11-02T17:30:00');
+        const $d = document.getElementById('d');
+        const $h = document.getElementById('h');
+        const $m = document.getElementById('m');
+        const $s = document.getElementById('s');
+        const $after = document.getElementById('after');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) {
+                $d.textContent = 0; $h.textContent = 0; $m.textContent = 0; $s.textContent = 0;
+                $after.textContent = 'C’est le grand jour !';
+                clearInterval(timer);
+                return;
+            }
+            const sec = Math.floor(diff / 1000);
+            const days = Math.floor(sec / 86400);
+            const hours = Math.floor((sec % 86400) / 3600);
+            const mins = Math.floor((sec % 3600) / 60);
+            const secs = sec % 60;
+
+            $d.textContent = days;
+            $h.textContent = String(hours).padStart(2, '0');
+            $m.textContent = String(mins).padStart(2, '0');
+            $s.textContent = String(secs).padStart(2, '0');
+        }
+        updateCountdown();
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
